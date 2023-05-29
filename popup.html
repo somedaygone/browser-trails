@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Trails</title>
+    <link rel="stylesheet" href="css/trail.css">
+    <link rel="stylesheet" href="css/drag.css">
+    <style>
+      /* Browser extensions have a maximum width of 800px and a maximum height of 600px.
+         Anything beyond 780x580 gets scrollbars automagically. */
+      body {min-width: 780px;}
+    </style>
+  </head>
+  <body>
+    <!-- Three divs, but only one active 
+         trailHead - initial form to get trail name
+         trail     - main screen showing the trail 
+         trailEnd  - -->
+    <!-- TODO: Allow input of a description -->
+    <div id="trailHead" style="display:none;">
+      <form id="trailNameForm">
+        <img src="icons/icon16.png" alt="Browser Trails icon">
+        <label for="trailNameInput">Trail Name:</label>
+        <input id="trailNameInput" type="text" maxlength="80" placeholder="Enter trail name">
+        <button id="start" class="button button-blue" type="submit">START</button>
+        <button id="close" class="button button-gray close">CLOSE</button>
+      </form>
+    </div>
+    <div id="trail" style="display:block;">
+      <table>
+        <tr>
+          <td><img src="icons/icon16.png" alt="Browser Trails icon"></td>
+          <td><h3 id="trailName" title="">My Trail</h3></td>
+          <td><button id="note" class="button button-blue">NOTE</button></td>
+          <td><button id="stop" class="button button-red">STOP</button></td>
+          <td><button id="close" class="button button-gray close">CLOSE</button></td>
+        </tr>
+      </table>
+      <hr>
+      <table id="trails" class="table">
+        <thead>
+          <tr>
+              <th>Browser Trails</th>
+              <th></th>
+              <th></th>
+          </tr>
+        </thead>
+        <tr><td>No data collected yet...</td></tr>
+      </table>
+    </div>
+    <script src="popup.js"></script>
+    <script src="drag.js"></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+label {
+    font-size: 1.17em;
+    font-weight: bold;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.button {
+  border: none;
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 550;
+  cursor: pointer;
+}
+
+.button-blue {
+  background-color: #0000ff; /* True blue */
+  color: #fff;
+}
+
+.button-purple {
+  background-color: #80397b; /* This is OneNote's purple */
+  color: #fff;
+}
+
+.button-red {
+  background-color: #FF5335; /* Cinnabar. Something you'd eat on a trail. */
+  color: #fff;
+}
+
+.button-gray {
+  background-color: #808080; /* Or grey, son. */
+  color: #fff;
+}

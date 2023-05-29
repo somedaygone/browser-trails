@@ -1,0 +1,47 @@
+.table {
+  border: 0px solid #ccc;
+  border-collapse: collapse;
+}
+.table th {
+    display: none;
+}  
+.table th,
+.table td {
+  border: 1px solid #ffe;
+}
+.table th,
+.table td {
+  padding: 0.6rem;
+}
+.draggable {
+  cursor: move;
+  user-select: none;
+}
+.placeholder {
+  background-color: #edf2f7;
+  border: 2px dashed #cbd5e0;
+}
+.clone-list {
+  border-top: 1px solid #ccc;
+}
+.clone-table {
+  border-collapse: collapse;
+  border: none;
+}
+.clone-table th {
+    display: none;
+}  
+.clone-table th,
+.clone-table td {
+  border: 1px solid #ffe;
+  border-top: none;
+  padding: 0.6rem;
+}
+.dragging {
+  background: #fff;
+  border-top: 1px solid #ccc;
+  z-index: 999;
+}
+.no-wrap {
+  white-space: nowrap;
+}
