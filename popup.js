@@ -114,6 +114,27 @@ function addElements(element, array) {
     // Create table row
     const tableRow = document.createElement("tr");
 
+    // Create delete button cell
+    const deleteButtonCell = document.createElement("td");
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "X";
+    deleteButton.classList.add("delete-button");
+    deleteButton.addEventListener("click", function () {
+      const row = this.parentNode.parentNode; // Get the row that contains the delete button
+      const rowIndex = row.rowIndex; // Get the index of the row in the table
+      // Remove the trail entry from the array
+      array.splice(rowIndex - 1, 1); // Remove the row from the array
+      // Save the updated trail to local browser storage
+      chrome.storage.local.get(null, (results => {
+        results.trail = array;
+        chrome.storage.local.set(results);
+      }));
+      // Remove the table row from the popup
+      row.remove();
+    });
+    deleteButtonCell.appendChild(deleteButton);
+    tableRow.appendChild(deleteButtonCell);
+
     // Create timestamp cell
     const timeStampCell = document.createElement("td");
     timeStampCell.textContent = timeStampToText(array[i].timeStamp);
