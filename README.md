@@ -23,7 +23,14 @@ TODO: add installation instructions
 <img src="https://github.com/somedaygone/browser-trails/blob/main/img/browser-trails-delete-0.5.0.png" width="600" />
 </kbd>
 
+**Reordering a trail entry**  
+<kbd>
+<img src="https://github.com/somedaygone/browser-trails/blob/main/img/browser-trails-drag-0.6.0.png" width="600" />
+</kbd>
+
 ## Release history
+5/29/2023 v0.6.0 - Drag and re-order steps in the trail  
+
 5/29/2023 v0.5.0 - Delete steps in the trail  
 
 5/29/2023 v0.4.0 Add notes to the trail  
@@ -41,7 +48,6 @@ TODO: add installation instructions
 
 ## Future release plans (subject to change)
 ### Minimally viable product. Codename "Trailblazer"
-0.6.0 - Drag and re-order steps in the trail  
 0.8.0 - Stopping the trail causes it to create a page in OneNote  
 1.0.0 - Tidy up code and styling  
 

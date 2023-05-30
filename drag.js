@@ -181,6 +181,17 @@ document.addEventListener("DOMContentLoaded", function () {
           rows[endRowIndex].nextSibling
         );
 
+    // Also change in browser storage
+    console.log("draggingRowIndex", draggingRowIndex);
+    console.log("endRowIndex", endRowIndex);
+    chrome.storage.local.get(null, (results => {
+      console.log("trail length", results.trail.length);
+      // results.trail is 0 indexed, so we need to subtract 1 from each index
+      const draggedRow = results.trail.splice(draggingRowIndex-1, 1)[0];
+      results.trail.splice(endRowIndex-1, 0, draggedRow);
+      chrome.storage.local.set(results);
+    }));
+
     // Bring back the table
     table.style.removeProperty("visibility");
 
@@ -196,8 +207,9 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    const firstCell = row.firstElementChild;
-    firstCell.classList.add("draggable");
-    firstCell.addEventListener("mousedown", mouseDownHandler);
+    // Get the second cell in the row and set it as draggable element
+    const secondCell = row.firstElementChild.nextElementSibling; 
+    secondCell.classList.add("draggable"); // Add the draggable class to the second cell
+    secondCell.addEventListener("mousedown", mouseDownHandler);
   });
 });
