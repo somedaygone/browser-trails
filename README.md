@@ -3,16 +3,14 @@ A browser extension that will keep track of your browser search trail on a given
 
 TODO: add installation instructions
 
-**Starting a trail**
-
+**Starting a trail**  
 <kbd>
-<img src="https://github.com/somedaygone/browser-trails/blob/main/img/browser-trails-start-0.3.6.png" width="200" />
+<img src="https://github.com/somedaygone/browser-trails/blob/main/img/browser-trails-start-0.3.6.png" width="600" />
 </kbd>
 
-**An active trail**
-
+**An active trail**  
 <kbd>
-<img src="https://github.com/somedaygone/browser-trails/blob/main/img/browser-trails-trail-0.3.6.png" width="200" />
+<img src="https://github.com/somedaygone/browser-trails/blob/main/img/browser-trails-trail-0.3.6.png" width="600" />
 </kbd>
 
 
