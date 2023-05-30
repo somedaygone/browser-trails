@@ -13,9 +13,10 @@
     </style>
   </head>
   <body>
-    <!-- Three divs, but only one active 
+    <!-- Multiple divs, but only one active 
          trailHead - initial form to get trail name
          trail     - main screen showing the trail 
+         trailNote - screen to add a note to the trail
          trailEnd  - TODO: Add this div to show close options -->
     <!-- TODO: Allow input of a description -->
     <!-- trailHead div is initial form to get the trail name -->
@@ -50,6 +51,17 @@
         </thead>
         <tr><td>No data collected yet...</td></tr>
       </table>
+    </div>
+    <!-- trailNote div is screen to add a note to the trail -->
+    <div id="trailNote" style="display:none;">
+      <form id="trailNoteForm">
+        <img src="icons/icon16.png" alt="Browser Trails icon">
+        <label for="trailNoteInput">Note:</label>
+        <button id="add" class="button button-blue" type="submit">ADD</button>
+        <button id="close" class="button button-gray close">CLOSE</button>
+        <br><br>
+        <textarea id="trailNoteInput" rows="5" style="width: 600px;" placeholder="Enter note"></textarea>
+      </form>
     </div>
     <script src="popup.js"></script>
     <script src="drag.js"></script>

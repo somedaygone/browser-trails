@@ -28,6 +28,47 @@ trailNameForm.addEventListener("submit", function (event) {
   window.close();
 });
 
+// NOTE button on trail div
+const noteButton = document.getElementById("note");
+noteButton.addEventListener("click", function () {
+  // hide trail div
+  var myDiv = document.getElementById("trail");
+  myDiv.style.display = "none";
+
+  // show trailNote div
+  var myDiv = document.getElementById("trailNote");
+  myDiv.style.display = "block";
+});
+
+// ADD button on trailNote div
+const addButton = document.getElementById("add");
+addButton.addEventListener("click", function () {
+  // Get the note from the form
+  const trailNote = document.getElementById("trailNoteInput").value;
+  // Add the note to the trail
+  chrome.storage.local.get(null, (results => {
+    // Define a trail entry object
+    var trailEntry = {
+      url: "", // url of the page
+      title: trailNote, // note text
+      timeStamp: Date.now(), // timestamp of when the note was added
+      faviconUrl: "icons/icon16.png" // Browser Trails favicon
+    };
+    results.trail.push(trailEntry); // add the note to the trail
+
+    // Save the updated trail to local browser storage
+    chrome.storage.local.set(results);
+  }));
+
+  // hide trailNote div
+  var myDiv = document.getElementById("trailNote");
+  myDiv.style.display = "none";
+
+  // show trail div
+  var myDiv = document.getElementById("trail");
+  myDiv.style.display = "block";
+});
+
 // STOP button on trail div
 const stopButton = document.getElementById("stop");
 stopButton.addEventListener("click", function () {
@@ -89,15 +130,23 @@ function addElements(element, array) {
 
     // Create link cell. The title of the page is the text of the link.
     const linkCell = document.createElement("td");
-    const link = document.createElement("a");
-    link.href = array[i].url;
-    link.textContent = array[i].title;
-    link.addEventListener('click', onAnchorClick); // Links don't work in a popup without this
-    linkCell.appendChild(link);
-    tableRow.appendChild(linkCell);
+    if (array[i].url === "") {
+      // Add plain text if it's a note
+      const textNode = document.createTextNode(array[i].title);
+      linkCell.appendChild(textNode);
+      tableRow.appendChild(linkCell);
+    } else {
+      // Add a link if it's a page
+      const link = document.createElement("a");
+      link.href = array[i].url;
+      link.textContent = array[i].title;
+      link.addEventListener('click', onAnchorClick); // Links don't work in a popup without this
+      linkCell.appendChild(link);
+      tableRow.appendChild(linkCell);
+    }
 
     // Add the table row to the table
-    element.appendChild(tableRow);    
+    element.appendChild(tableRow);
   }
 }
 
@@ -105,11 +154,10 @@ function addElements(element, array) {
 chrome.storage.local.get(null, (results => {
   // If the trail name is blank, get the trail name.
   if (results.trailName === "") {
-    // hide all divs
-    var divs = document.getElementsByTagName("div");
-    for (var i = 0; i < divs.length; i++) {
-      divs[i].style.display = "none";
-    }
+    // hide trail div
+    var myDiv = document.getElementById("trail");
+    myDiv.style.display = "none";
+
     // show trailHead
     var myDiv = document.getElementById("trailHead");
     myDiv.style.display = "block";

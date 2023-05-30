@@ -10,11 +10,17 @@ TODO: add installation instructions
 
 **An active trail**  
 <kbd>
-<img src="https://github.com/somedaygone/browser-trails/blob/main/img/browser-trails-trail-0.3.6.png" width="600" />
+<img src="https://github.com/somedaygone/browser-trails/blob/main/img/browser-trails-trail-0.4.0.png" width="600" />
 </kbd>
 
+**Adding a note to a trail**  
+<kbd>
+<img src="https://github.com/somedaygone/browser-trails/blob/main/img/browser-trails-note-0.4.0.png" width="600" />
+</kbd>
 
 ## Release history
+5/29/2023 v0.4.0 Add notes to the trail  
+
 5/29/2023 v0.3.6 Change the extension icon color when trail is started or stopped  
 
 5/28/2023 v0.3.5 Initial commit  
@@ -28,7 +34,6 @@ TODO: add installation instructions
 
 ## Future release plans (subject to change)
 ### Minimally viable product. Codename "Trailblazer"
-0.4.0 - Add notes to the trail  
 0.5.0 - Delete steps in the trail  
 0.6.0 - Drag and re-order steps in the trail (you can drag them already, but the change isn't saved yet)  
 0.8.0 - Stopping the trail causes it to create a page in OneNote  
