@@ -1,19 +1,35 @@
 # browser-trails
 A browser extension that will keep track of your browser search trail on a given topic
 
+TODO: add installation instructions
+
+**Starting a trail**
+
+<kbd>
+<img src="https://github.com/somedaygone/browser-trails/blob/main/img/browser-trails-start-0.3.6.png" width="200" />
+</kbd>
+
+**An active trail**
+
+<kbd>
+<img src="https://github.com/somedaygone/browser-trails/blob/main/img/browser-trails-trail-0.3.6.png" width="200" />
+</kbd>
+
+
 ## Release history
-0.3.5 Initial commit
+5/29/2023 v0.3.6 Change the extension icon color when trail is started or stopped  
+
+5/28/2023 v0.3.5 Initial commit  
 - Install and pin the browser extension
 - Click the Browser Trails icon to begin
 - Enter a trail name and click "START". If trail name is blank, defaults to "My Trail"
 - As you navigate, Browser Trails will keep track of your trail for any completely loaded page, just like the Browser History (Ctrl+H) screen.
 - Access the trail by clicking the extension icon
 - The STOP button currently clears the trail
-- The NOTE button does nothing yet.
+- The NOTE button does nothing yet.  
 
 ## Future release plans (subject to change)
 ### Minimally viable product. Codename "Trailblazer"
-0.3.6 - Change the extension icon color when trail is started or stopped  
 0.4.0 - Add notes to the trail  
 0.5.0 - Delete steps in the trail  
 0.6.0 - Drag and re-order steps in the trail (you can drag them already, but the change isn't saved yet)  
