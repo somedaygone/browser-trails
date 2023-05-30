@@ -29,7 +29,7 @@ TODO: add installation instructions
 </kbd>
 
 ## Release history
-5/29/2023 v0.6.0 - Drag and re-order steps in the trail  
+5/29/2023 v0.6.0 - Drag and re-order steps in the trail using the timestamp column  
 
 5/29/2023 v0.5.0 - Delete steps in the trail  
 
@@ -49,7 +49,7 @@ TODO: add installation instructions
 ## Future release plans (subject to change)
 ### Minimally viable product. Codename "Trailblazer"
 0.8.0 - Stopping the trail causes it to create a page in OneNote  
-1.0.0 - Tidy up code and styling  
+1.0.0 - Tidy up code and styling and publish extension  
 
 ### Second major release. Codename "Snapshot"
 1.5.0 - Add screenshots to the trail with a link to the current page  
